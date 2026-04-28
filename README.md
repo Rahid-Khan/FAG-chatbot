@@ -179,7 +179,9 @@ Expected outcome:
 
 ## Evaluation
 
-static\images\image.png
+### UI Preview
+
+![FAQ Chatbot UI](static/images/image.png)
 
 ```bash
 python scripts/evaluate_chatbot.py
