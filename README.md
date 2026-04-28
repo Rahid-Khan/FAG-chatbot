@@ -179,7 +179,7 @@ Expected outcome:
 
 ## Evaluation
 
-Run the evaluation harness:
+static\images\image.png
 
 ```bash
 python scripts/evaluate_chatbot.py
