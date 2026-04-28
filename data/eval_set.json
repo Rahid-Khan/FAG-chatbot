@@ -1,0 +1,22 @@
+[
+  {
+    "query": "I forgot my password",
+    "expected_answer_contains": "Forgot Password",
+    "expected_match": true
+  },
+  {
+    "query": "Can you ship internationally?",
+    "expected_answer_contains": "internationally",
+    "expected_match": true
+  },
+  {
+    "query": "How do I contact support?",
+    "expected_answer_contains": "customer support",
+    "expected_match": true
+  },
+  {
+    "query": "Do you have office locations in Europe?",
+    "expected_answer_contains": "I'm not sure about that yet",
+    "expected_match": false
+  }
+]

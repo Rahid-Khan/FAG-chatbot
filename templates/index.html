@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <main class="app-layout">
+        <aside class="side-panel">
+            <h2>Quick Help</h2>
+            <p>Tap a suggested prompt to ask faster.</p>
+            <button class="quick-question" data-question="How can I reset my password?">Reset password</button>
+            <button class="quick-question" data-question="How can I track my order?">Track my order</button>
+            <button class="quick-question" data-question="Do you offer international shipping?">International shipping</button>
+            <button class="quick-question" data-question="How can I contact customer support?">Contact support</button>
+        </aside>
+
+        <section class="chat-shell">
+            <header class="chat-header">
+                <div>
+                    <h1>FAQ Assistant</h1>
+                    <p>Instant answers for account, order, shipping, and support questions.</p>
+                </div>
+                <button id="clearBtn" class="secondary-btn" type="button">Clear chat</button>
+            </header>
+
+            <section id="chatWindow" class="chat-window" aria-live="polite">
+                <div class="message-row bot">
+                    <article class="message bot">
+                        <p>Hello! I am ready to help. Ask your question below.</p>
+                        <span class="message-time" id="welcomeTime"></span>
+                    </article>
+                </div>
+            </section>
+
+            <div class="chat-meta">
+                <p id="statusText" class="status-text">Ready</p>
+                <p id="confidenceBadge" class="confidence-badge confidence-neutral">Waiting for a question</p>
+            </div>
+
+            <section class="composer">
+                <label class="sr-only" for="input">Enter your question</label>
+                <input id="input" type="text" placeholder="Type your question..." autocomplete="off" maxlength="300" aria-label="Question input">
+                <button id="sendBtn" type="button">Send</button>
+            </section>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+</body>
+</html>
